@@ -6,10 +6,10 @@
       "use": "@vercel/python"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/tts",
-      "dest": "api/index.py"
+      "source": "/api/tts",
+      "destination": "/api/index.py"
     }
   ]
 }
