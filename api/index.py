@@ -33,5 +33,11 @@ async def tts():
     )
 
 # Vercel 要求的入口
-def handler(request):
+# 修改后的 handler 部分
+def handler(event, context):
+    return app(event, context)
+
+# 显式暴露 app 变量给 Vercel 识别
+app = app
+
     return app(request)
